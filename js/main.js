@@ -15,15 +15,15 @@ overlay.addEventListener("click", () => {
   menuButton.classList.toggle("open");
   overlay.classList.toggle("show");
 });
-// window.addEventListener('scroll', function() {
-//   var header = document.querySelector('header');
-//   var scrollPosition = window.scrollY;
-//   if (scrollPosition > 0) {
-//     header.classList.add('scrolled');
-//   } else {
-//     header.classList.remove('scrolled');
-//   }
-// });
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('header');
+  var scrollPosition = window.scrollY;
+  if (scrollPosition > 300) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
 
 window.addEventListener('load', fadeInImages);
 window.addEventListener('load', fadeInText);
@@ -70,4 +70,4 @@ function fadeInText() {
 
 //================================================================
 // video
-document.querySelector("video").muted = false;
+// document.querySelector("video").muted = false;

@@ -20,7 +20,12 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color:var(white);
+  background-color:rgb(50, 50, 50);
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  /* text-align: center; */
   
 }
 
@@ -30,8 +35,10 @@ img {
 }
 .containerHeader {
   width: 100%;
-  height: 660px;
-  margin: 0 auto
+  height:120px;
+  box-shadow: 0 0 40px black;
+  margin: 0 auto;
+  /* box-shadow: 0 0 20px black; */
 }
 
 .container {
@@ -39,28 +46,62 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-.container h2{
-  font-size: 50px;
+
+.personal_Project h2{
+  font-size: 40px;
   margin-top: 80px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
-  color: rgb(123, 123, 123);
+  justify-content:left;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
 }
 .content {
-  margin-top: 50px;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: left;
 }
+.content video {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  max-width: 840px;
+  max-height: 500px;
+  box-shadow: 0 0 4px white;
+  height: auto;
+}
+/* ================================================================ */
 .item {
+  /* box-shadow: 0 0 3px black; */
   flex: 0 0 auto;
   display: flex;
-  margin-bottom: 10em;
- 
+  height: 500px;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  align-items: center;
 }
-.item:nth-child(2) {
+.item p {
+ margin: 10px;
+}
+
+@media ( Max-width: 62em){
+  .content{
+    align-items: center;
+  }
+   .content video{
+    max-width: 100%;
+    max-height: 100%;
+    margin:0;
+   }
+   .item{
+    flex-direction: column;
+   }
+  }
+  /* =========================================== */
+/* .item:nth-child(2) {
   order: 2;
 }
 
@@ -70,7 +111,7 @@ img {
 
 .item:nth-child(4) {
   order: 4;
-}
+} */
 
 button {
   text-align: center;
@@ -94,7 +135,7 @@ button:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width:30%;
+  width:100%;
   height: 100%;
   background-color: var(--gray);
   z-index: 5;
@@ -111,10 +152,10 @@ button:hover {
 /* === Header === */
 header {
   width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-position: center;
-  background-image: url("/img/h7.jpg");
+  /* background-image: url("/img/h7.jpg"); */
   z-index: 1;
   opacity: 1;
 }
@@ -124,13 +165,58 @@ header.scrolled {
   left: 0;
   right: 0;
 }
-
+.tomtat{
+  margin-left: 50px;
+  padding-top: 100px;;
+  display: flex;
+  flex-direction: column;
+  
+}
 .tomtat h1{
-  text-align: center;
+ 
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 100;
+  text-align: left;
   position: relative;
-  top: 250px;
-  color:#ffff;
-  text-shadow: 0 0 20px black;
+  
+  color:rgb(255, 255, 255);
+  /* text-shadow:0 0 10px black; */
+}
+.tomtat p{
+  width: 400px;
+  font-size: 20px;
+  margin-top: 30px;
+  color:rgb(142, 142, 142);
+  text-align: middle;
+  font-weight: 300;
+}
+@media (max-width: 62em) {
+  .tomtat {
+    align-items:center ;
+    width: 100%;
+    top: 150px;
+    margin: 0 auto;
+  }
+  .tomtat h1{
+    text-align: center;
+  }
+  .tomtat p{
+    text-align: center;
+  }
+  .languages_links{
+    margin-left: 40px;
+  }
+  .gameExplain{
+    margin: 0;
+    align-items: center;
+  }
+  .Game_Comment_Edit p {
+    margin-left: 50px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
   
 }
 /* ================================================================ */
@@ -158,26 +244,71 @@ header.scrolled {
 
 /* ================================================================ */
 .workBox {
+  padding-top:50px;
+  text-align: center;
+  /* padding: 20px;
+  margin: 50px; */
+}
+.workBox h2 {
+  color: rgb(255, 255, 255);
+
+  font-weight: 100;
+  font-size: 30px;
+  text-shadow: 0 0 5px black;
+}
+/* ================================================================ */
+.gameExplain{
+  color: white;
   display: flex;
-  justify-content: center;
-  padding: 20px;
-  margin: 50px;
+  flex-direction: column;
+  margin-bottom: 250px;
 }
-.workBox h1 {
-  font-size: 80px;
+.Title_Game_Edit{
+  margin-bottom: 20px;
+  color: rgb(217, 121, 121) ;
 }
+.Title_Game_Edit p{
+  font-size: 20px;
+}
+.Role{
+  margin-left: 5px;
+  display: flex;
+}
+.Role div{
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgb(103, 103, 103);
+  box-shadow: 0 0 5px white;
+  font-weight: 200;
+}
+.Role div:nth-child(2){
+  background-color: rgb(205, 80, 80);
+}
+.Game_Comment_Edit p{
+ color: rgb(186, 186, 186);
+ margin-right: 50px;
+ font-weight: 300;
+}
+
+.gamePlayBtn p{
+  font-weight: 300;
+  text-shadow: 0 0 15px white;
+}
+
 /* ================================================================ */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 0;
+  margin-bottom: 100px;
 }
 
 /* logo */
 .navbar__logo {
   margin-right: auto;
-  padding: 20px;
+  padding: 30px;
+  padding-left: 3em;
 }
 .navbar__logo h1{
   color: white;
@@ -193,9 +324,9 @@ header.scrolled {
   position: fixed;
   top: 0;
   left: 0;
-  width: 60%;
+  width: 40%;
   height: 100%;
-  background-color: var(--gray);
+  background-color: rgb(41, 40, 40);
   z-index: 5;
   transition: var(--smooth);
   transform: translateX(-100%);
@@ -210,14 +341,57 @@ header.scrolled {
 
 .navbar__link {
   list-style: none;
-  margin: 30px;
+  margin: 40px;
 }
 
 .navbar__link a {
   text-decoration: none;
-  color: #00a35f;
-  font-weight: 300;
-  text-shadow: 0 0 1px black;
+  color: white;
+  font-weight: 500;
+  font-size:15px;
+  transition: var(--smooth);
+}
+.languages_links{
+  padding-top: 30px;
+  flex-direction: column;
+  margin-bottom: auto;
+  height: 95px;
+  width: 50px;
+}
+.languages_link a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 200;
+  font-size:13px;
+  transition: var(--smooth);
+}
+.EN a{
+  text-shadow:0 0 6px white;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+  font-size:13px;
+  transition: var(--smooth);
+}
+.JP a{
+  text-shadow:0 0 6px white;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+  font-size:13px;
+  transition: var(--smooth)
+  ;
+}
+.VN a{
+  text-shadow:0 0 6px white;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+  font-size:13px;
   transition: var(--smooth);
 }
 
@@ -248,7 +422,7 @@ header.scrolled {
 .navbar__icon {
   width: 45px;
   height: 6px;
-  background-color: var(--gray);
+  background-color: #a09f9f;
   border-radius: 5px;
   transition: var(--smooth);
   position: relative;
@@ -260,7 +434,7 @@ header.scrolled {
   position: absolute;
   width: 45px;
   height: 6px;
-  background-color: var(--gray);
+  background-color: #e6e6e6;
   border-radius: 5px;
   transition: var(--smooth);
 }
@@ -297,13 +471,12 @@ header.scrolled {
     align-items: center;
   }
   .navbar__link a {
-    color: var(--gray);
+    color: white;
   }
   .navbar__icons {
     display: none;
   }
   .navbar__btn {
-   
     /* background-color: var(--gray); */
     background-color: transparent;
     border-color: white;
@@ -311,6 +484,7 @@ header.scrolled {
     border-style: solid;
   }
 }
+
 
 /* === Banner === */
 /* #banner {
@@ -475,34 +649,6 @@ header.scrolled {
 } */
 
 
-
-.works__btn {
-  text-align: center;
-  margin-top: 8em;
-}
-
-.works__btn button {
-  font-size: 1rem;
-}
-
-@media (min-width: 62em) {
-  #works h2 {
-    margin-bottom: 3em;
-  }
-  .works__img {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .works__img--single {
-    margin: 0 5em;
-    width: 35%;
-  }
-  .works__img--single:nth-child(3) {
-    margin-top: 0;
-  }
-}
-
 /* === Footer === */
 #footer {
   overflow: hidden;
@@ -512,19 +658,11 @@ header.scrolled {
   align-items: center;
 }
 
-.footer__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(25%);
-  z-index: -1;
-}
-
 .footer__heading {
-  max-width: 400px;
+  max-width: 100px;
   margin: 0 auto;
   text-align: center;
-  color: var(--gray);
+  color: white;
 }
 
 .footer__contact {
@@ -535,27 +673,13 @@ header.scrolled {
 
 .footer__contact a {
   text-decoration: none;
-  color: var(--gray);
-}
-
-.footer__dec {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateX(-45%);
-  z-index: -1;
+  color: white;
 }
 
 @media (min-width: 62em) {
-  .footer__img {
-    top: -15%;
-    right: 0;
-    transform: translateX(32%);
-    width: 60%;
-  }
   .footer__heading {
     text-align: initial;
-    margin: 0;
+    /* margin: 0; */
   }
   .footer__contact {
     display: flex;

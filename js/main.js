@@ -25,29 +25,30 @@ window.addEventListener('scroll', function() {
   }
 });
 
-window.addEventListener('load', fadeInImages);
-window.addEventListener('load', fadeInText);
+// window.addEventListener('load', fadeInImages);
 
-function fadeInImages() {
-  const images = document.querySelectorAll('.fade-in-image');
-  const options = {
-    threshold: 0
-  };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, options);
-  images.forEach(image => {
-    observer.observe(image);
-  });
-}
+// function fadeInImages() {
+//   const images = document.querySelectorAll('.fade-in-image');
+//   const options = {
+//     threshold: 0
+//   };
+
+//   const observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add('fade-in');
+//         observer.unobserve(entry.target);
+//       }
+//     });
+//   }, options);
+//   images.forEach(image => {
+//     observer.observe(image);
+//   });
+// }
 //================================================================ 
 // Text
+window.addEventListener('load', fadeInText);
 function fadeInText() {
   const text = document.querySelectorAll('.fade-in-text');
   const options = {
@@ -69,5 +70,34 @@ function fadeInText() {
 }
 
 //================================================================
-// video
-// document.querySelector("video").muted = false;
+// const icons = document.querySelectorAll('.icon');
+
+// if (icons) {  // check if the icons element exists
+//   icons.forEach(icon => {
+//     icon.addEventListener('click', function() {
+//       const sectionId = this.getAttribute('data-section');
+//       const section = document.querySelector(sectionId);
+//       section.scrollIntoView({ behavior: 'smooth' });
+//     });
+//   });
+// }
+
+// window.addEventListener('scroll', function() {
+//   const sections = document.querySelectorAll('section');
+//   const dock = document.querySelector('#dock');
+
+//   if (sections && dock) {
+//     sections.forEach(section => {
+//       const top = section.offsetTop - dock.offsetHeight;
+//       const bottom = top + section.offsetHeight;
+//       if (window.pageYOffset > top && window.pageYOffset < bottom) {
+//         const id = section.getAttribute('id');
+//         const icon = document.querySelector(`[data-section="#${id}"]`);
+//         if (icon) {  // check if the icon element exists
+//           icons.forEach(icon => icon.classList.remove('active'));
+//           icon.classList.add('active');
+//         }
+//       }
+//     });
+//   }
+// });

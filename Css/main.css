@@ -35,8 +35,8 @@ img {
 }
 .containerHeader {
   width: 100%;
-  height:120px;
-  box-shadow: 0 0 20px black;
+  height:100px;
+  box-shadow: 0 0 10px black;
   margin: 0 auto;
   /* box-shadow: 0 0 20px black; */
 }
@@ -74,13 +74,12 @@ img {
 }
 /* ================================================================ */
 .item {
-  /* box-shadow: 0 0 3px black; */
   flex: 0 0 auto;
   display: flex;
   height: 500px;
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin: 50px;
+  padding: 100px;
   align-items: center;
 }
 .item p {
@@ -94,9 +93,11 @@ img {
    .content video{
     max-width: 100%;
     max-height: 100%;
-    margin:0;
+    margin: 0;
    }
    .item{
+    margin: 0;
+    padding: 20px;
     flex-direction: column;
    }
   }
@@ -130,7 +131,7 @@ button:hover {
 }
 
 
-/* === Overlay === */
+/* === Overlay ===------------------------------------------------- */
 #overlay {
   position: fixed;
   top: 0;
@@ -149,7 +150,7 @@ button:hover {
 }
 
 
-/* === Header === */
+/* === Header =======================================================*/
 header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -165,6 +166,39 @@ header.scrolled {
   left: 0;
   right: 0;
 }
+/* #dock {
+  position: fixed;
+  left: 0;
+  right: 50;
+  bottom: 50%;  
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.icon.active {
+  transform: scale(1.2);
+} */
+
+/* ================================================================ */
 .tomtat{
   margin-left: 50px;
   padding-top: 100px;;
@@ -173,7 +207,7 @@ header.scrolled {
   
 }
 .tomtat h1{
- 
+  text-shadow: 0 0 10px black;
   font-size: 50px;
   font-style: italic;
   font-weight: 100;
@@ -360,7 +394,7 @@ header.scrolled {
   width: 50px;
 }
 .languages_link{
-  padding-top: 12px;
+  padding-top: 8px;
 }
 .languages_link a {
   text-decoration: none;
@@ -370,7 +404,7 @@ header.scrolled {
   transition: var(--smooth);
 }
 .EN{
-  padding-top: 12px;
+  padding-top: 8px;
 }
 .EN a{
   text-shadow:0 0 6px white;
@@ -382,7 +416,7 @@ header.scrolled {
   transition: var(--smooth);
 }
 .JP{
-  padding-top: 12px;
+  padding-top: 8px;
 }
 .JP a{
   text-shadow:0 0 6px white;
@@ -395,7 +429,7 @@ header.scrolled {
   ;
 }
 .VN{
-  padding-top: 12px;
+  padding-top: 8px;
 }
 .VN a{
   text-shadow:0 0 6px white;

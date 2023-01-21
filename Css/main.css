@@ -133,6 +133,8 @@ header.scrolled {
   flex-direction: column;
 }
 .content iframe {
+  width: 448px;
+  height:  252px;
   border-radius: 5px;
   margin-bottom: 10px;
   margin-right: 20px;
@@ -157,9 +159,9 @@ header.scrolled {
   .content{
     align-items: center;
   }
-   .content video{
-    max-width: 100%;
-    max-height: 100%;
+   .content iframe{
+    width: 350;
+    
     margin: 0;
    }
    .item{
@@ -262,14 +264,13 @@ button:hover {
     margin-left: 50px;
     text-align: center;
     font-size: 15px;
-  }
-  
-  
+  } 
 }
 /* ================================================================ */
 /* fade  */
 
-.fade-in-other {
+.fade-
+n-other {
   opacity: 0;
   transition: all 0.7s ease-in-out;
   transform: translateY(50px);

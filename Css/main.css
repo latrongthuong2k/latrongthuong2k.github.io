@@ -46,7 +46,7 @@ img {
 }
 
 .container {
-  max-width: 1700px;
+  max-width: 2560px;
   width: 100%;
   margin: 0 auto;
 }
@@ -133,8 +133,8 @@ header.scrolled {
   flex-direction: column;
 }
 .content iframe {
-  width: 448px;
-  height:  252px;
+  width: 560px;
+  height:  315px;
   border-radius: 5px;
   margin-bottom: 10px;
   margin-right: 20px;
@@ -158,9 +158,11 @@ header.scrolled {
 @media ( Max-width: 62em){
   .content{
     align-items: center;
+    text-align: center;;
   }
    .content iframe{
-    width: 350;
+    width: fit-content;
+    height: fit-content;
     
     margin: 0;
    }
@@ -255,13 +257,17 @@ button:hover {
     width: 100%;
     top: 150px;
   }
+  .tomtat p {
+      width: 400px;
+  }
   .languages_links{
     padding-top: 20px;
     padding-bottom: 20px;
     margin-left: 40px;
   }
   .Game_Comment_Edit p {
-    margin-left: 50px;
+    height: 320;
+    width:  510;;
     text-align: center;
     font-size: 15px;
   } 
@@ -688,9 +694,18 @@ n-other {
 #MonsterMaker iframe
 {
   margin-top: 50px;
-  border-radius: 5px;
-  margin-right: 20px;
+    width: 560px;
+      height: 315px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      margin-right: 20px;
   box-shadow: 0 0 4px white;
+}
+@media (Max-width: 62em) {
+ #MonsterMaker iframe {
+  height: fit-content;
+  width: fit-content;
+ }
 }
 
 

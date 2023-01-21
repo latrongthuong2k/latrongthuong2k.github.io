@@ -365,13 +365,14 @@ n-other {
   font-size: 20px;
 }
 .Role{
-  margin-left: 5px;
+  width: 360;
   display: flex;
   align-items: center;
 }
 .Role div{
-  margin: 5px;
+  width: 90;
   border-radius: 5px;
+  margin: 5px;
   background-color: rgb(103, 103, 103);
   box-shadow: 0 0 5px white;
   font-weight: 200;
@@ -408,8 +409,11 @@ n-other {
 .Role2 div:nth-child(5) {
   background-color: rgba(18, 126, 188, 0.908);
 }
-@media (Max-width: 62em) {
+@media (Max-width: 500px) {
   .Role2 {
+    flex-direction: column;
+  }
+  .Role {
     flex-direction: column;
   }
 }
@@ -418,7 +422,7 @@ n-other {
 .Game_Comment_Edit p{
  color: rgb(186, 186, 186);
  font-weight: 300;
- width: 500px;
+ width: 350px;
 }
 
 .gamePlayBtn {

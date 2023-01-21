@@ -70,34 +70,23 @@ function fadeInText() {
 }
 
 //================================================================
-// const icons = document.querySelectorAll('.icon');
+// var productDescription = document.getElementById("product-description");
+// var menuIndicator = document.getElementById("menu-indicator");
+// var menuBar = document.getElementById("menu-bar");
 
-// if (icons) {  // check if the icons element exists
-//   icons.forEach(icon => {
-//     icon.addEventListener('click', function() {
-//       const sectionId = this.getAttribute('data-section');
-//       const section = document.querySelector(sectionId);
-//       section.scrollIntoView({ behavior: 'smooth' });
-//     });
-//   });
-// }
-
-// window.addEventListener('scroll', function() {
-//   const sections = document.querySelectorAll('section');
-//   const dock = document.querySelector('#dock');
-
-//   if (sections && dock) {
-//     sections.forEach(section => {
-//       const top = section.offsetTop - dock.offsetHeight;
-//       const bottom = top + section.offsetHeight;
-//       if (window.pageYOffset > top && window.pageYOffset < bottom) {
-//         const id = section.getAttribute('id');
-//         const icon = document.querySelector(`[data-section="#${id}"]`);
-//         if (icon) {  // check if the icon element exists
-//           icons.forEach(icon => icon.classList.remove('active'));
-//           icon.classList.add('active');
-//         }
-//       }
-//     });
-//   }
+// // Listen for scroll event
+// window.addEventListener("scroll", function() {
+//   // Get the current scroll position
+//   var scrollPosition = window.pageYOffset;
+//   // Move the product description based on the scroll position
+//   productDescription.style.top = -scrollPosition + "px";
+  
+//   // Get the current position of the indicator
+//   var indicatorTop = parseFloat(menuIndicator.style.top);
+//   // Calculate the new position of the indicator based on the scroll position
+//   var newIndicatorTop = (scrollPosition / menuBar.clientHeight) * 100;
+//   // Use the "clamp" function to limit the indicator's movement to the size of the menu bar
+//   var clampedIndicatorTop = Math.max(0, Math.min(newIndicatorTop, 100 - (menuIndicator.clientHeight / menuBar.clientHeight) * 100));
+//   // Update the position of the indicator
+//   menuIndicator.style.top = clampedIndicatorTop + "%";
 // });

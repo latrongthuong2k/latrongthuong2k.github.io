@@ -12,6 +12,11 @@
   --BlueDark:#2C3539;
   --GapN : 10em;
   --smooth: all 0.3s ease-in;
+/* Color Grame  */
+  --Denx : #222831;
+  --grey : #393E46;
+  --xanhnc : #00ADB5;
+  --trang : #EEEEEE;
 }
 
 html {
@@ -20,7 +25,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color:rgb(50, 50, 50);
+  background-color:var(--grey);
   justify-content: center;
   width: 100%;
   height: auto;
@@ -38,7 +43,6 @@ img {
   height:100px;
   box-shadow: 0 0 10px black;
   margin: 0 auto;
-  /* box-shadow: 0 0 20px black; */
 }
 
 .container {
@@ -46,6 +50,71 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+.container2 {
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* === Header =======================================================*/
+header {
+  width: 100%;
+  background-color:rgba(0, 133, 131, 0.495);
+  background-size: cover;
+  background-position: center;
+  /* background-image: url("/img/h7.jpg"); */
+  z-index: 1;
+  opacity: 1;
+}
+header.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* ================================================================ */
+/* #container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product-description {
+  position: relative;
+}
+
+#product-image {
+  width: 300px;
+  height: 200px;
+}
+
+#menu-container {
+  position: fixed;
+  right: 5px;
+  top: 40%;
+  width: 3px;
+  height: 200px;
+  background-color: gray;
+}
+
+#menu-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#menu-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 40px;
+  background-color: white;
+} */
+
+/* ================================================================ */
+
 
 .personal_Project h2{
   font-size: 40px;
@@ -57,34 +126,32 @@ img {
   font-weight: 100;
 }
 .content {
+  align-items: center;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-  align-items: left;
 }
-.content video {
+.content iframe {
   border-radius: 5px;
   margin-bottom: 10px;
   margin-right: 20px;
-  max-width: 840px;
-  max-height: 500px;
   box-shadow: 0 0 4px white;
-  height: auto;
 }
 /* ================================================================ */
 .item {
+  align-items: center;
   flex: 0 0 auto;
   display: flex;
-  height: 500px;
-  width: 100%;
-  margin: 50px;
-  padding: 100px;
-  align-items: center;
+  height: 800px;
+  width:100%;
+  margin: 100;
+  flex-direction: column;
 }
 .item p {
  margin: 10px;
 }
+
 
 @media ( Max-width: 62em){
   .content{
@@ -96,10 +163,12 @@ img {
     margin: 0;
    }
    .item{
+    height: 750px;
     margin: 0;
     padding: 20px;
     flex-direction: column;
    }
+    
   }
   /* =========================================== */
 /* .item:nth-child(2) {
@@ -150,58 +219,11 @@ button:hover {
 }
 
 
-/* === Header =======================================================*/
-header {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  background-position: center;
-  /* background-image: url("/img/h7.jpg"); */
-  z-index: 1;
-  opacity: 1;
-}
-header.scrolled {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-/* #dock {
-  position: fixed;
-  left: 0;
-  right: 50;
-  bottom: 50%;  
-  width: 100%;
-  height: 50px;
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-end;
-  justify-content: space-around;
-}
-.icon {
-  width: 40px;
-  height: 40px;
-  background-color: #ccc;
-  border-radius: 5px;
-  text-align: center;
-  line-height: 40px;
-  transition: all 0.5s ease-in-out;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon:hover {
-  transform: scale(1.2);
-}
-
-.icon.active {
-  transform: scale(1.2);
-} */
 
 /* ================================================================ */
 .tomtat{
-  margin-left: 50px;
-  padding-top: 100px;;
+  padding-top: 100px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   
@@ -211,41 +233,30 @@ header.scrolled {
   font-size: 50px;
   font-style: italic;
   font-weight: 100;
-  text-align: left;
   position: relative;
-  
+  text-align: center;
   color:rgb(255, 255, 255);
   /* text-shadow:0 0 10px black; */
 }
 .tomtat p{
-  width: 350px;
+  width: 500px;
   font-size: 20px;
   margin-top: 30px;
-  color:rgb(142, 142, 142);
-  text-align: middle;
+  color:rgb(143, 142, 142);
+  position: relative;
+  text-align: center;
   font-weight: 300;
+  margin: 0 auto;
 }
 @media (max-width: 62em) {
   .tomtat {
-    align-items:center ;
     width: 100%;
     top: 150px;
-    margin: 0 auto;
-  }
-  .tomtat h1{
-    text-align: center;
-  }
-  .tomtat p{
-    text-align: center;
   }
   .languages_links{
     padding-top: 20px;
     padding-bottom: 20px;
     margin-left: 40px;
-  }
-  .gameExplain{
-    margin: 0;
-    align-items: center;
   }
   .Game_Comment_Edit p {
     margin-left: 50px;
@@ -258,19 +269,19 @@ header.scrolled {
 /* ================================================================ */
 /* fade  */
 
-.fade-in-image {
+.fade-in-other {
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
   transform: translateY(50px);
 }
 
-.fade-in-image.fade-in {
+.fade-in-other.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 .fade-in-text {
   opacity: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease-in-out;
   transform: translateY(50px);
 }
 .fade-in-text.fade-in {
@@ -280,14 +291,25 @@ header.scrolled {
 
 /* ================================================================ */
 .workBox {
-  padding-top:50px;
+  margin-top: 100px;
   text-align: center;
-  /* padding: 20px;
-  margin: 50px; */
+  background-color: rgb(84, 126, 129);
 }
 .workBox h2 {
   color: rgb(255, 255, 255);
+  padding: 20px;
+  font-weight: 100;
+  font-size: 30px;
+  text-shadow: 0 0 5px black;
+}
+.workBox2 {
+  text-align: center;
+  background-color: rgba(67, 149, 92, 0.681)
+}
 
+.workBox2 h2 {
+  color: rgb(255, 255, 255);
+  padding: 20px;
   font-weight: 100;
   font-size: 30px;
   text-shadow: 0 0 5px black;
@@ -297,18 +319,48 @@ header.scrolled {
   color: white;
   display: flex;
   flex-direction: column;
-  margin-bottom: 250px;
+  margin-bottom: 200px;
+  margin: 0;
+  align-items: center;
+  text-align: center;
 }
 .Title_Game_Edit{
   margin-bottom: 20px;
-  color: rgb(217, 121, 121) ;
+  color: rgb(210, 71, 71) ;
 }
 .Title_Game_Edit p{
+  font-size: 20px;
+  text-shadow: rgb(0, 0, 0)  0 0px 20px;
+}
+.Title_Game_Edit2 {
+  margin-bottom: 20px;
+  color: rgba(206, 206, 206, 0.94);
+  text-shadow: rgb(66, 66, 66) 0 0px 20px;
+}
+
+.Title_Game_Edit2 p {
+  font-size: 20px;
+}
+.Title_Game_Edit3 {
+  margin-bottom: 20px;
+  color:rgba(206, 206, 206, 0.94);
+}
+
+.Title_Game_Edit3 p {
+  font-size: 20px;
+}
+.Title_Game_Edit4 {
+  margin-bottom: 20px;
+  color: rgba(206, 206, 206, 0.94);
+}
+
+.Title_Game_Edit4 p {
   font-size: 20px;
 }
 .Role{
   margin-left: 5px;
   display: flex;
+  align-items: center;
 }
 .Role div{
   margin: 5px;
@@ -318,15 +370,51 @@ header.scrolled {
   font-weight: 200;
 }
 .Role div:nth-child(2){
-  background-color: rgb(205, 80, 80);
+  background-color: rgb(43, 30, 30);
 }
-.Game_Comment_Edit p{
- color: rgb(186, 186, 186);
- margin-right: 50px;
- font-weight: 300;
+.Role div:nth-child(3) {
+  background-color: rgb(18, 94, 104);
+}
+.Role2 {
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+.Role2 div {
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgb(94, 94, 94);
+  box-shadow: 0 0 5px white;
+  font-weight: 200;
 }
 
-.gamePlayBtn p{
+.Role2 div:nth-child(2) {
+  background-color: rgba(201, 167, 28, 0.866);
+}
+
+.Role2 div:nth-child(3) {
+  background-color: rgba(44, 182, 13, 0.899);
+}
+.Role2 div:nth-child(4) {
+  background-color: rgba(20, 181, 141, 0.923);
+}
+.Role2 div:nth-child(5) {
+  background-color: rgba(18, 126, 188, 0.908);
+}
+@media (Max-width: 62em) {
+  .Role2 {
+    flex-direction: column;
+  }
+}
+
+
+.Game_Comment_Edit p{
+ color: rgb(186, 186, 186);
+ font-weight: 300;
+ width: 500px;
+}
+
+.gamePlayBtn {
   font-weight: 300;
   text-shadow: 0 0 15px white;
 }
@@ -351,7 +439,29 @@ header.scrolled {
 }
 .no-underline {
   text-decoration: none;
+  color: #fff;
+
 }
+.no-underline2 {
+  text-decoration: none;
+  color:   rgb(255, 187, 0);
+  
+}
+.no-underline3 {
+  text-decoration: none;
+  color:
+    rgb(150, 255, 21);
+  ;
+
+}
+.no-underline4 {
+  text-decoration: none;
+  color:
+    rgb(52, 174, 255);
+  ;
+
+}
+
 
 /* menu */
 
@@ -531,206 +641,55 @@ header.scrolled {
   }
 }
 
-
-/* === Banner === */
-/* #banner {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.banner__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-}
-
-.banner__heading {
-  max-width: 300px;
-  margin: 0 auto;
-  text-align: center;
-  color: var(--gray);
-}
-
-.banner__heading h1 {
-  font-size: 2.25rem;
-  padding-top: 4em;
-  margin-bottom: 0.8em;
-}
-
-.banner__heading p {
-  font-weight: 300;
-  line-height: 2em;
-  margin-bottom: 1.5em;
-}
-
-.banner__btn {
-  font-size: 1rem;
-  background-color: transparent;
-  border-color: white;
-  border-width: 1px;
-  border-style: solid;
-}
-
-.banner__socials {
-  margin-top: 3em;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 1.5rem;
-}
-
-.banner__socials a {
-  color: var(--gray);
-  transition: var(--smooth);
-}
-
-.banner__socials a:hover {
-  color: var(--green-l);
-  transition: var(--smooth);
-} */
-
-/* @media (min-width: 62em) {
-  .banner__heading {
-    text-align: initial;
-    margin: 0;
-    padding-top: 0;
-  }
-  .banner__socials {
-    justify-content: flex-start;
-  }
-  .banner__socials a {
-    margin-right: 45px;
-  }
-  .banner__img {
-    width: 60%;
-  }
-} */
-
-/* === Things === */
-/* #things {
-  position: relative;
-  overflow-x: hidden;
-  margin-top: 15em;
-} */
-
-/* #things h2 {
-  text-align: center;
-  color: var(--gray);
-  margin-bottom: 3em;
-}
-
-.things__dec:nth-child(2) {
-  top: initial;
-  left: initial;
-  bottom: 15%;
-  right: 0;
-  transform: translateX(60%);
-  z-index: -1;
-}
-
-.things__item {
-  margin: 3em 0;
-}
-
-.things__item img {
-  padding-bottom: 4em;
-}
-
-.things__item--heading {
-  text-align: center;
-  color: var(--gray);
-}
-
-.things__item--heading p {
-  font-weight: 300;
-  line-height: 2em;
-  max-width: 300px;
-  margin: 0 auto;
-  padding-top: 1em;
-} */
-
-/* @media (min-width: 62em) {
-  .things__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-  }
-  .things__item img {
-    width: 40%;
-    padding-bottom: 0;
-  }
-  .things__item--heading {
-    width: 45%;
-    text-align: initial;
-  }
-  .things__item--heading p {
-    max-width: 500px;
-    margin: 0;
-  }
-  .things__item:nth-child(odd) img {
-    order: 2;
-    width: 40%;
-    padding-bottom: 0;
-  }
-  .things__item--heading:nth-child(odd) {
-    order: 1;
-    width: 45%;
-    text-align: initial;
-  }
-} */
-
-/* === Works === */
-/* #works {
-  padding-top: 10em;
-  position: relative;
-  overflow-x: hidden;
-}
-
-#works h2 {
-  text-align: center;
-  color: var(--gray);
-} */
-
-
 /* === Footer === */
 #footer {
+  margin-top: 500px;
   overflow: hidden;
-  position: relative;
-  height: 100vh;
+  height: 300px;
   display: flex;
-  align-items: center;
+
 }
 
 .footer__heading {
-  max-width: 100px;
-  margin: 0 auto;
-  text-align: center;
+  max-width:200px;
   color: white;
+  position: relative;
+  text-align: center;
+  margin-left: 38.5%;
+ 
 }
 
 .footer__contact {
-  margin-top: 2em;
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  max-width: 500px;
 }
 
 .footer__contact a {
   text-decoration: none;
+  padding-right: 50px;
   color: white;
+  text-align: center;
 }
 
 @media (min-width: 62em) {
-  .footer__heading {
-    text-align: initial;
-    /* margin: 0; */
-  }
   .footer__contact {
     display: flex;
     justify-content: space-between;
   }
-
 }
+/* ================================================================ */
+#GravityFalls
+{
+  background-color:rgb(#000000);
+}
+/* ================================================================ */
+#MonsterMaker iframe
+{
+  margin-top: 50px;
+  border-radius: 5px;
+  margin-right: 20px;
+  box-shadow: 0 0 4px white;
+}
+
 

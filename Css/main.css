@@ -660,39 +660,33 @@ n-other {
 /* === Footer === */
 #footer {
   margin-top: 500px;
-  overflow: hidden;
   height: 300px;
   display: flex;
+  justify-content: center;
 
 }
 
 .footer__heading {
-  max-width:200px;
+  width: 100%;
   color: white;
   position: relative;
-  text-align: center;
-  margin-left: 38.5%;
- 
-}
-
-.footer__contact {
-  display: flex;
   align-items: center;
-  max-width: 500px;
+  text-align: center;
 }
+ .footer__contact {
+   display: flex;
+ }
 
 .footer__contact a {
+  padding: 20px;
   text-decoration: none;
-  padding-right: 50px;
   color: white;
   text-align: center;
 }
-
-@media (min-width: 62em) {
-  .footer__contact {
-    display: flex;
-    justify-content: space-between;
-  }
+@media (Max-width: 62em) {
+.footer__contact {
+  flex-direction: column;
+}
 }
 /* ================================================================ */
 #GravityFalls

@@ -363,7 +363,8 @@ n-other {
 }
 .Title_Game_Edit4 {
   margin-bottom: 20px;
-  color: rgba(206, 206, 206, 0.94);
+  color: rgb(0, 221, 255);
+  text-shadow: rgb(0, 0, 0) 0 0px 20px;
 }
 
 .Title_Game_Edit4 p {

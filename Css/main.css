@@ -704,10 +704,16 @@ n-other {
       margin-right: 20px;
   box-shadow: 0 0 4px white;
 }
+.manyVideo{
+  display: flex;
+}
 @media (Max-width: 62em) {
  #MonsterMaker iframe {
   height: fit-content;
   width: fit-content;
+ }
+ .manyVideo{
+  flex-direction: column;
  }
 }
 #Maze

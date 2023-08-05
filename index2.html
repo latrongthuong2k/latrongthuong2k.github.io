@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main2.css" />
+    <title>My Portfolio</title>
+</head>
+
+
+
+<body>
+    <!-- overlay -->
+    <section id="overlay"></section>
+    <header>
+        <div class="containerHeader">
+            <div class="containerNav">
+                <div class="navBar">
+                    <div class="item" onclick="scrollToPosition()" style="cursor: pointer;"><a
+                            href="./index2.html">Home</a>
+                    </div>
+                    <div class="item" onclick="scrollToPosition()" style="cursor: pointer;">Portfolio</div>
+                    <div class="item" onclick="scrollToPosition()" style="cursor: pointer;">Skill</div>
+                    <div class="item" onclick="scrollToPosition()" style="cursor: pointer;">About Me</div>
+                    <div class="item" onclick="scrollToPosition()" style="cursor: pointer;">Contact</div>
+                </div>
+            </div>
+
+            <div class="headerContentVideo">
+                <div class="cover">
+                    <div class="author">
+                        <!-- <div class="logo">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div> -->
+                        <h2>LA-TRONG THUONG</h2>
+                        <p> GAME-PROGRAMER </p>
+                    </div>
+                    <div class="social-Contact">
+                        <div><a href="https://www.linkedin.com/in/thuong-la-77ab08254/?trk=public-profile-join-page"><i
+                                    class="fa-brands fa-linkedin-in"></i></a></div>
+                        <div><a href="https://www.facebook.com/thuong1910"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div><a href="https://github.com/latrongthuong2k"><i class="fa-brands fa-github"></i></a></div>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+                <video autoplay loop muted>
+                    <source src="./shooting.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="container">
+            <div class="skill">
+                <div class="title fade-in">
+                    <p>Skill & Experience </p>
+                    <div></div>
+                </div>
+                <div class="skills fade-in">
+                    <div class="item">
+                        <img src="./Orther/unity (2).png" alt="skill-Software">
+                        <h4>UNITY</h4>
+                        <p>Build full basic 2D, 3D games. Experience using assets and animation. C#.Net language and
+                            clean
+                            code
+                            principle</p>
+                    </div>
+                    <div class="item">
+                        <img src="./Orther/github.png" alt="skill-Software">
+                        <h4>GIT</h4>
+                        <p>Git command, assets management experience, work flow </p>
+                    </div>
+                    <div class="item">
+                        <img src="./Orther/adobe-photoshop.png" alt="skill-Software">
+                        <h4>PHOTOSHOP</h4>
+                        <p>Graphic design, texture creation and web design</p>
+                    </div>
+                </div>
+                <!-- Portfolio container -->
+            </div>
+            <div id="Portfolio" class="portfolio">
+                <div class="title fade-in">
+                    <p>PORTFOLIO</p>
+                    <div></div>
+                    <p>Some of the projects I made with my friends and for evaluating academic performance at school.
+                    </p>
+                </div>
+                <div class="itemContainer">
+                    <div class="item">
+                        <div class="main-image">
+                            <div class="image-container">
+                                <div class="overlay2"></div>
+                                <img src="./img2/MonsterMaker.png" alt="main-Img">
+                            </div>
+                        </div>
+                        <p>MONSTER MAKER</p>
+                    </div>
+                    <div class="item">
+                        <div class="main-image">
+                            <div class="image-container">
+                                <div class="overlay2"></div>
+                                <img src="./img2/MazeIcon.png" alt="main-Img">
+                            </div>
+                        </div>
+                        <p>MAZE</p>
+                    </div>
+                    <div class="item">
+                        <div class="main-image">
+                            <div class="image-container">
+                                <div class="overlay2"></div>
+                                <img src="./img2/SpaceShipLogo.png" alt="main-Img">
+                            </div>
+                        </div>
+                        <p>SHOOTING STARS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+</body>
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/eca9d5c25e.js" crossorigin="anonymous"></script>
+<!-- main js -->
+<script src="JS.js"></script>
+
+<style>
+    *,
+    *:before,
+    *:after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --smooth: all 0.3s ease-in;
+        --BGcolor: rgb(154, 125, 114);
+        --MauDA: #242424;
+        --MauDaNhat: rgb(61, 61, 61);
+        --mauTextSkill: rgb(255, 255, 255);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    body {
+        font-family: "Roboto", sans-serif;
+        /* background-color: var(--grey); */
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .fade-in {
+        opacity: 0;
+        animation: fade-in 1s ease-in-out forwards;
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translateY(-40px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    /* //////////////////////////////// */
+    .main-image {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .main-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .overlay2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.464);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    /* .sub-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: relative;
+        gap: 50px;
+        width: 500px;
+        z-index: 10;
+        left: 20%;
+        transform: translateY(-90%);
+    }
+
+    .sub-image {
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+
+    .sub-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+        transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+    }
+
+    .sub-image.active img {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    } */
+
+    .navBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: 50px;
+        height: 60px;
+        background-color: #242424;
+        z-index: 10;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .navBar .item,
+    .navBar a {
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    .navBar .item:hover,
+    .navBar .item a:hover {
+        color: rgb(148, 81, 0);
+    }
+
+    .headerContentVideo {
+
+        overflow: hidden;
+        height: 950px;
+        width: 100%;
+        overflow: hidden;
+        background-color: var(--BGcolor);
+    }
+
+    .cover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+        position: relative;
+        z-index: 2;
+        top: 435px;
+        color: white;
+    }
+
+    .headerContentVideo video {
+        width: 100%;
+        height: 95%;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        object-fit: cover;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        height: 95%;
+        background-color: rgba(30, 30, 30, 0.4);
+        z-index: 1;
+        /* Màu đen với độ mờ 0.5 (50%) */
+    }
+
+    .author {
+        width: 300px;
+    }
+
+    .author h2 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 50px;
+        text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .author p {
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 10px;
+    }
+
+    .social-Contact {
+        display: flex;
+        gap: 40px;
+    }
+
+    .social-Contact div {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50px;
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+        background-color: rgb(255, 255, 255);
+        color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .skill {
+        background-color: var(--BGcolor);
+        text-align: center;
+    }
+
+    .skill .title p {
+        color: white;
+        font-size: 40px;
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+
+    .skill .title div {
+        background-color: rgb(255, 255, 255);
+        width: 70px;
+        height: 5px;
+        margin-bottom: 30px;
+    }
+
+    .skills {
+        display: flex;
+        gap: 100px;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    .skill .item {
+        width: 300px;
+        height: 200px;
+        color: var(--mauTextSkill);
+    }
+
+    .skill .item h4 {
+        font-size: 26px;
+        line-height: 45px;
+        font-weight: 300;
+    }
+
+    .skill .item p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 27px;
+    }
+
+    .skill img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .portfolio .title {
+        font-weight: 100;
+        color: var(--MauDaNhat);
+        padding: 20px 0;
+    }
+
+    .portfolio .title p:nth-of-type(1) {
+        font-size: 60px;
+        padding-bottom: 10px;
+    }
+
+    .portfolio .title p:nth-of-type(2) {
+        padding: 20px 0;
+        font-size: 16px;
+    }
+
+    .title div {
+        margin: 0 auto;
+        background-color: rgb(111, 56, 29);
+        width: 100px;
+        height: 8px;
+        border-radius: 50px;
+        color: white;
+    }
+
+
+    .itemContainer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        gap: 200px;
+        padding: 100px 0;
+        width: 100%;
+        height: 500px;
+        background-color: rgb(118, 45, 45);
+        overflow: scroll;
+    }
+
+    .itemContainer .item {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border: none;
+        /* transition: 0.3s ease; */
+        /* margin: 10px 0; */
+    }
+
+    .itemContainer .item:nth-child(1) {}
+
+    .itemContainer .item:nth-child(2) {}
+
+    .itemContainer .item:nth-child(3) {}
+
+    .itemContainer .item p {
+        padding-top: 20px;
+        font-size: 20px;
+        color: rgb(228, 228, 228);
+    }
+
+    .button1 button,
+    .button2 button {
+        padding: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* .container4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+
+    .product {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        transition: all 0.3s;
+    }
+
+    .main-product {
+        width: 300px;
+        height: 300px;
+    }
+
+    .product:nth-child(2) {
+        width: 250px;
+        height: 250px;
+    }
+
+    .product:nth-child(3) {
+        width: 200px;
+        height: 200px;
+    }
+
+    .product:nth-child(n+4) {
+        display: none;
+    }
+
+    .container4:hover .product {
+        opacity: 0.5;
+    }
+
+    .container4:hover .main-product {
+        transform: scale(1.1);
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .container4:hover .main-product~.product {
+        transform: scale(0.9);
+        position: relative;
+        z-index: 0;
+    }
+
+    .container4:hover .main-product~.product:nth-child(2) {
+        transform: translateX(-100px) scale(0.9);
+    }
+
+    .container4:hover .main-product~.product:nth-child(3) {
+        transform: translateX(-200px) scale(0.9);
+    }
+
+    .container4:hover .main-product~.product:nth-child(4) {
+        transform: translateX(100px) scale(0.9);
+    }
+
+    .container4:hover .main-product~.product:nth-child(5) {
+        transform: translateX(200px) scale(0.9);
+    } */
+</style>
+
+</html>
